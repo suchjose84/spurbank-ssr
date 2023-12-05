@@ -1,0 +1,33 @@
+#headerWrapper {
+    background-color: rgb(40, 38, 52);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+  }
+
+
+
+
+/* Media query for screens with a width of 600 pixels or more (tablet) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Media query for screens with a width of 1200 pixels or more (desktop) */
+@media only screen and (min-width: 1200px) {
+    #headerWrapper {
+        background-color: rgb(40, 38, 52);
+        width: 100%;
+      }
+    main {
+        display: grid;
+        grid-template-columns: 15% 60% 25%;
+    }
+    
+
+
+
+}

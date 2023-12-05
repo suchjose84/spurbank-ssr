@@ -1,0 +1,39 @@
+<div class="articleBox">
+
+  <section routerLink="/macys-parade2023" class="hero-section navPageSection">
+    <figure class="hero-image-container">
+      <picture class="hero-image-box">
+        <source media="(max-width: 500px)" [srcset]="mobileImage">
+        <source media="(max-width: 800px)" [srcset]="tabletImage">
+        <source media="(min-width: 801px)" [srcset]="largeImage">
+        <img class="responsive-image" [src]="defaultImage" alt="landing-page-image">
+      </picture>
+      <div class="figcaption-container">
+        <figcaption>Photo by <a target="_blank" rel="noopener noreferrer"
+            href="https://unsplash.com/@carsonmasterson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Carson
+            Masterson</a> on <a
+            href="https://unsplash.com/photos/person-holding-android-smartphone-d2b5xTT8Ves?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </figcaption>
+      </div>
+      <div class="overlay-text-box">
+        <h1>Macy's Thanksgiving Day Parade 2023: A Spectacular Display of Tradition and Innovation</h1>
+      </div>
+      
+    </figure>
+  </section>
+
+  <section class="navPageSection article-list-section">
+    <div>
+      <h2 class="article-list-h2">Latest News</h2>
+      <ul>
+          <li *ngFor="let blog of blogs | slice:0:9" routerLink="{{blog.routerLink}}">
+            <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+            <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
+            <hr>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+
+</div>

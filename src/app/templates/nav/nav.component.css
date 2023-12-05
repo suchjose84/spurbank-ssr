@@ -1,0 +1,104 @@
+#headerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.custom-toggler {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bar {
+  width: 20px;
+  height: 3px;
+  background-color: rgb(192,192,192);
+  border-radius: 180px;
+  margin: 4px 0;
+}
+
+.navbar {
+  width: fit-content;
+  display: none;
+  border-radius: 0 0 5px 5px;
+  padding: 0 5px;
+  margin: 0;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  background-color: rgb(40,38,52);
+  opacity: .8;
+  color: lightgray;
+  z-index: 1;
+}
+
+.navbar.show {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#headerNav ul {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+#headerNav li {
+
+  width: 100%;
+  margin: 3px 0;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, .2);
+  
+}
+
+.navbar li:hover {
+  border-radius: 5px;
+}
+
+#headerNav a {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+}
+
+/* Media query for screens with a width of 600 pixels or more (tablet) */
+@media only screen and (min-width: 600px) {}
+
+/* Media query for screens with a width of 1200 pixels or more (desktop) */
+@media only screen and (min-width: 1200px) {
+  #hamburgerWrapper {
+    display: none;
+
+  }
+  #headerNav {
+    width: 100%;
+    display: none;
+  }
+  .navbar {
+    overflow: visible;
+    display: flex;
+    /* width: 100%; */
+  }
+  .navbar ul {
+    /* width: 500px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid blue;
+  }
+
+}

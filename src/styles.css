@@ -1,1 +1,225 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  /* Adjust color as needed for contrast with the background */
+}
+h1, h2, h3, h5, h4, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+
+}
+li:hover {
+  cursor: pointer;
+}
+.hover-red:hover {
+  color: rgb(255, 64, 87);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+
+
+/*********** BLOG ARTICLES STYLES ****************/
+.articleBox {
+  min-height: 500px;
+  width: 100%;
+  padding: 15px 2%;
+  background-color: rgb(253, 204, 253);
+}
+
+.articleBox h1 {
+  text-align: center;
+}
+.articleBox h3 {
+  font-size: 1.2rem;
+}
+.articleBox h2 {
+  font-size: 1.4rem;
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5 em;
+  color: #333;
+}
+
+.second-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2 em;
+  font-style: italic;
+  color: #0066cc;
+}
+
+.paragraphSection {
+  margin-top: 1rem;
+}
+
+.article-iframe {
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.video-container {
+  width: 100%;
+}
+.video-caption {
+  width: 100%;
+  text-align: left;
+  font-size: .8rem;
+
+}
+.twitter-tweet-box {
+  display: flex;
+  justify-content: center;
+}
+.ingredient-container ul{
+  list-style-type: circle;
+  margin: 0 auto;
+  width: 70%;
+}
+
+/************ NAV PAGES STYLES ******************/
+.articleBox {
+  padding: 0;
+}
+/* HERO Section */
+.hero-image-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: relative;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.hero-image-box{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+
+}
+
+.responsive-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+.overlay-text-box{
+  color: white;
+  width: 100%;
+  padding: 5px;
+  background-color: #663399;
+}
+.overlay-text-box h1 {
+  width: 100%;
+  text-align: left;
+
+}
+.figcaption-container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+}
+.hero-image-container figcaption {
+  width: 100%;
+  text-align: left;
+  color: #333;
+  font-size: .6rem;
+}
+
+/* ARTICLE LIST SECTION */
+.nav-page-list-category {
+  font-size: .9rem;
+  color: darkslateblue;
+  font-weight: bold;
+
+}
+.nav-page-list-title {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-weight: bold;
+
+}
+.article-list-section {
+  margin-top: 15px;
+  padding: 2%;
+}
+
+.article-list-h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.hover-red:hover {
+  color: rgb(255, 64, 87);
+}
+
+/* Media query for screens with a width of 600 pixels or more (tablet) */
+@media only screen and (min-width: 600px) {}
+
+/* Media query for screens with a width of 1200 pixels or more (desktop) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: rgb(223, 87, 166);
+  }
+
+  .paragraphSection {
+    margin-top: 2rem;
+  }
+
+  /* .articleBox p, .articleBox h3, .articleBox h2 {
+    margin-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+  } */
+
+  .articleBox iframe {
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    border-radius: 5px;
+    display: block;
+  }
+  .ingredient-container ul{
+    width: 70%;
+  }
+
+}

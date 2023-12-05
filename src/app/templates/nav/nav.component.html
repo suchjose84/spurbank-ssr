@@ -1,0 +1,21 @@
+<!-- app.component.html -->
+<nav id="headerNav" (click)="onNavbarClick($event)">
+  <div id="hamburgerWrapper">
+    <button class="custom-toggler" (click)="toggleNavbar()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+  </div>
+  <div class="navbar" [ngClass]="{ 'show': isNavbarOpen }">
+    <ul>
+      <li routerLink="/news" (click)="closeNavbar()">News</li>
+      <li routerLink="/entertainment" (click)="closeNavbar()">Entertainment</li>
+      <li routerLink="/food" (click)="closeNavbar()">Food</li>
+      <li routerLink="/life" (click)="closeNavbar()">Life</li>
+      <li routerLink="/tech" (click)="closeNavbar()">Tech</li>
+      <li routerLink="/business" (click)="closeNavbar()">Business</li>
+      <!-- <li routerLink="/video" (click)="closeNavbar()">Videos</li> -->
+    </ul>
+  </div>
+</nav>

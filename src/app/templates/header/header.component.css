@@ -1,0 +1,194 @@
+
+header {
+  background-color: rgb(40, 38, 52);
+  padding: 10px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Apply styles to all children of the header except the eldest one */
+header > *:not(:first-child) {
+    margin-left: 10px;
+}
+
+header img {
+  display: block;
+  max-height: 100%;
+  outline: none;
+
+}
+
+header img[hideLogo] {
+  display: none;
+}
+
+/****************** HORIZONTAL NAV ****************/
+/* #headerHorizontalNav {
+    flex: 1;
+    max-width: 50%;
+  } */
+#headerHorizontalNav {
+  display: none;
+  font-weight: bold;
+}
+  
+
+/************* SEARCHBAR STYLING *****************/
+#searchBarDiv {
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#searchBarForm {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  color: lightgray;
+  font-size: 1.1rem;
+}
+
+#searchBarForm label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: hsl(240, 15%, 30%);
+  padding: 0 10px;
+
+}
+
+#searchBarForm label:focus {
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+#searchIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header #searchBarForm input {
+  background-color: hsl(240, 15%, 30%);
+  border: none;
+  color: lightgray;
+  width: 100%;
+  font-size: 1rem;
+  appearance: none;
+  border-radius: 50px;
+  /* padding: 5px 10px; */
+
+}
+
+header #searchBarForm input::placeholder {
+  color: lightgray;
+
+}
+
+header #searchBarForm input:focus::placeholder {
+  color: hsl(240, 15%, 45%);
+
+}
+
+header #searchBarForm input:focus {
+  outline: none;
+  caret-color: lightgray;
+
+}
+
+#homeTopInputDiv {
+  width: 87%;
+}
+
+#arrowIconDiv {
+  margin-right: 5px;
+}
+
+#arrowIcon {
+  font-size: 1.3rem;
+  color: lightgray;
+}
+
+div.align-self-left {
+  display: flex;
+  align-self: flex-start;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* HEADER SOCIAL MEDIA ICON STYLES */
+#headerMediaIconList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#headerMediaIconList i {
+  font-size: 2rem;
+  color: white;
+
+}
+
+.mousepointer {
+  cursor: pointer;
+}
+
+
+
+/* Media query for screens with a width of 600 pixels or more (tablet) */
+@media only screen and (min-width: 600px) {}
+
+/* Media query for screens with a width of 1200 pixels or more (desktop) */
+@media only screen and (min-width: 1200px) {
+
+  header {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+
+  /****************** HORIZONTAL NAV ****************/
+  #headerHorizontalNav {
+    display: block;
+    flex: 1;
+  }
+  #headerHorizontalNav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    color: lightgray;
+    box-sizing: border-box;
+
+  }
+  /* #headerHorizontalNav li:hover {
+    color: #aaa;
+
+  } */
+
+  /************* SEARCHBAR STYLING *****************/
+
+  header #searchBarForm label {
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+}
