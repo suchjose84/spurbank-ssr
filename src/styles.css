@@ -16,6 +16,7 @@ body {
 }
 h1, h2, h3, h5, h4, h6 {
   font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 
 ul,
@@ -53,13 +54,13 @@ p {
 .articleBox {
   min-height: 500px;
   width: 100%;
-  padding: 15px 2%;
+  padding: 15px 1%;
   background-color: rgb(253, 204, 253);
 }
 
-.articleBox h1 {
-  text-align: center;
-}
+/* .articleBox h1 {
+  
+} */
 .articleBox h3 {
   font-size: 1.2rem;
 }
@@ -82,8 +83,8 @@ p {
 
 .paragraphSection {
   margin-top: 1rem;
-  padding: 2%;
 }
+
 
 .article-iframe {
   margin: 0 auto;
@@ -110,9 +111,6 @@ p {
 }
 
 /************ NAV PAGES STYLES ******************/
-.articleBox {
-  padding: 0;
-}
 /* HERO Section */
 .hero-image-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
