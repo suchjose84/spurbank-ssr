@@ -11,7 +11,7 @@ export class Blog01YuyuHakushoComponent implements OnInit {
 
   constructor(private meta: Meta, private title: Title) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     // Update meta tags for the home page
     this.meta.addTags([
       { name: 'Spurbank', content: 'Spurbank.info' },
