@@ -82,6 +82,7 @@ p {
 
 .paragraphSection {
   margin-top: 1rem;
+  padding: 2%;
 }
 
 .article-iframe {
@@ -203,6 +204,8 @@ p {
 
   .paragraphSection {
     margin-top: 2rem;
+    width: 70%;
+    margin: 0 auto;
   }
 
   /* .articleBox p, .articleBox h3, .articleBox h2 {
