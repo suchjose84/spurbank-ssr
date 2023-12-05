@@ -20,7 +20,7 @@ export class Blog01YuyuHakushoComponent implements OnInit {
       { property: 'og:type', content: 'article' },
       { property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' },
       { property: 'og:description', content: 'Yuyu Hakusho Live-Action coming on Netflix' },
-      { property: 'og:image', content: 'https://www.spurbank.info/src/assets/images/spurbank-images/yuyu-hakusho2.png' }
+      { property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
       // Add more meta tags as needed
     ]);
 
