@@ -19,7 +19,7 @@ export class Blog01YuyuHakushoComponent implements OnInit {
       { property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho'},
       { property: 'og:type', content: 'Article' },
       { property: 'og:title', content: 'The Rock' },
-      { property: 'og:description', content: 'The Rock. So and so.' },
+      // { property: 'og:description', content: 'The Rock. So and so.' },
       { property: 'og:image', content: 'https://www.spurbank.info/src/assets/images/spurbank-images/yuyu-hakusho2.png' }
       // Add more meta tags as needed
     ]);
