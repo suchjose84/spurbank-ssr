@@ -11,19 +11,16 @@ export class Blog01YuyuHakushoComponent implements OnInit {
 
   constructor(private meta: Meta, private title: Title) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     // Update meta tags for the home page
-    this.meta.addTags([
-      { name: 'Spurbank', content: 'Spurbank.info' },
-      // { name: 'description', content: 'Description for your home page.' },
-      { property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho'},
-      { property: 'og:type', content: 'article' },
-      { property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' },
-      { property: 'og:description', content: 'Yuyu Hakusho Live-Action coming on Netflix' },
-      { property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
-      // Add more meta tags as needed
-    ]);
-
+    // this.meta.updateTag({ name: 'Spurbank', content: 'Spurbank.info' });
+    // this.meta.updateTag({ name: 'description', content: 'Description for your home page.' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho' });
+    // this.meta.updateTag({ property: 'og:type', content: 'article' });
+    this.meta.updateTag({ property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' });
+    this.meta.updateTag({ property: 'og:description', content: 'Yuyu Hakusho Live-Action coming on Netflix' });
+    this.meta.updateTag({ property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' });
+    
     this.setTitle(this.blogTitle);
   }
 
