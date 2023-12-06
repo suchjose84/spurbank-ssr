@@ -1,0 +1,77 @@
+<div class="articleBox">
+
+    <section routerLink="/macys-parade2023" class="hero-section navPageSection">
+      <figure class="hero-image-container">
+        <picture class="hero-image-box">
+          <source media="(max-width: 500px)" [srcset]="mobileImage">
+          <source media="(max-width: 800px)" [srcset]="tabletImage">
+          <source media="(min-width: 801px)" [srcset]="largeImage">
+          <img class="responsive-image" [src]="defaultImage" alt="landing-page-image">
+        </picture>
+        <div class="figcaption-container">
+          <figcaption>
+            some caption about the hero image here
+          </figcaption>
+        </div>
+        <div class="overlay-text-box">
+          <h1>Title</h1>
+        </div>
+        
+      </figure>
+    </section>
+  
+    <section class="navPageSection article-list-section">
+      <div>
+        <h2 class="article-list-h2">Latest News</h2>
+        <ul>
+            <li *ngFor="let blog of blogs | slice:0:9" routerLink="{{blog.routerLink}}">
+              <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+              <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
+              <hr>
+            </li>
+        </ul>
+      </div>
+    </section>
+  
+  
+</div>
+
+<!-- import { Component, OnInit } from '@angular/core';
+import BlogService from '../../blogs/blogs.service';
+import { Blog } from '../../blogs/blog.model';
+
+@Component({
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
+})
+
+export class HomePageComponent implements OnInit{
+  blogs: Blog[] = [];
+
+  mobileImage = '../../assets/images/spurbank-images/macys-500x333.jpg';
+  tabletImage = '../../assets/images/spurbank-images/macys-800x533.jpg';
+  largeImage = '../../assets/images/spurbank-images/macys-1199x547.jpg';
+  defaultImage = '../../assets/images/spurbank-images/macys-2400x1600.jpg';
+
+  
+
+  constructor(private blogService: BlogService){}
+  
+  
+  ngOnInit() {
+    this.blogs = this.blogService.getBlogData();
+    // this.trending1 = `${this.blogs[0].title} ${this.blogs[0].secondTitle}`;
+    
+  }
+
+  capitalizeFirstLetter(str: string): string {
+    if (typeof str === 'string' && str.length > 0) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    } else {
+      return str;
+    }
+  }
+
+
+} -->

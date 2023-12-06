@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { NavComponent } from './templates/nav/nav.component';
-import { HomePageComponent } from './nav-pages/home-page/home-page.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { LeftSidebarComponent } from './templates/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './templates/right-sidebar/right-sidebar.component';
@@ -32,8 +32,16 @@ import { Blog15GhostbustersFrozenEmpireComponent } from './blogs/blog15-ghostbus
 //Routing Modules
 import { BlogRoutingModule } from './blogs/blog-routing.module';
 import { NavRoutingModule } from './nav-pages/nav-routing.module';
-import { NewsPageComponent } from './nav-pages/news-page/news-page.component';
 import { RouterModule } from '@angular/router';
+
+//Nav Pages
+import { HomePageComponent } from './nav-pages/home-page/home-page.component';
+import { NewsPageComponent } from './nav-pages/news-page/news-page.component';
+import { BusinessPageComponent } from './nav-pages/business-page/business-page.component';
+import { EntertainmentPageComponent } from './nav-pages/entertainment-page/entertainment-page.component';
+import { FoodPageComponent } from './nav-pages/food-page/food-page.component';
+import { LifePageComponent } from './nav-pages/life-page/life-page.component';
+import { TechPageComponent } from './nav-pages/tech-page/tech-page.component';
 
 
 
@@ -41,13 +49,14 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
 
+    //Main Components
     HeaderComponent,
     NavComponent,
-    HomePageComponent,
     FooterComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
 
+    //Blog Pages
     Blog01YuyuHakushoComponent,
     Blog02MacysParade2023Component,
     Blog03MediaMattersVsElonMuskComponent,
@@ -63,17 +72,29 @@ import { RouterModule } from '@angular/router';
     Blog13PerfectingBulaloComponent,
     Blog14GodzillaMinusOneComponent,
     Blog15GhostbustersFrozenEmpireComponent,
-    NewsPageComponent
+
+    //Nav Pages
+    HomePageComponent,
+    NewsPageComponent,
+    BusinessPageComponent,
+    EntertainmentPageComponent,
+    FoodPageComponent,
+    LifePageComponent,
+    TechPageComponent
+
+
 
   ],
 
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     NgbModule,
     BlogRoutingModule,
     NavRoutingModule,
-    RouterModule
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

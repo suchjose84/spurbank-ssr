@@ -54,13 +54,9 @@ p {
 .articleBox {
   min-height: 500px;
   width: 100%;
-  padding: 15px 1%;
   background-color: rgb(253, 204, 253);
 }
 
-/* .articleBox h1 {
-  
-} */
 .articleBox h3 {
   font-size: 1.2rem;
 }
@@ -150,8 +146,8 @@ p {
 }
 .figcaption-container {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 3px;
+  left: 5px;
   width: 100%;
 }
 .hero-image-container figcaption {
@@ -190,6 +186,9 @@ p {
 .hover-red:hover {
   color: rgb(255, 64, 87);
 }
+.figcap-white figcaption{
+  color: white;
+}
 
 /* Media query for screens with a width of 600 pixels or more (tablet) */
 @media only screen and (min-width: 600px) {}
@@ -201,16 +200,13 @@ p {
   }
 
   .paragraphSection {
-    margin-top: 2rem;
     width: 70%;
+    margin: 2rem auto 0 auto;
+  }
+  .articleBox section {
+    width: 95%;
     margin: 0 auto;
   }
-
-  /* .articleBox p, .articleBox h3, .articleBox h2 {
-    margin-top: 100px;
-    width: 70%;
-    margin: 0 auto;
-  } */
 
   .articleBox iframe {
     margin: 0 auto;

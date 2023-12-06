@@ -1,6 +1,6 @@
 <div class="articleBox">
 
-  <section routerLink="/macys-parade2023" class="hero-section navPageSection">
+  <section routerLink="/turmoil-at-openai" class="hero-section navPageSection">
     <figure class="hero-image-container">
       <picture class="hero-image-box">
         <source media="(max-width: 500px)" [srcset]="tabletImage">
@@ -8,7 +8,7 @@
         <source media="(min-width: 801px)" [srcset]="largeImage">
         <img class="responsive-image" [src]="defaultImage" alt="landing-page-image">
       </picture>
-      <div class="figcaption-container">
+      <div class="figcaption-container figcap-white">
         <!--     target="_blank" rel="noopener noreferrer" [routerLink]="[]"     -->
         <figcaption>Photo by <a target="_blank" rel="noopener noreferrer"
             href="https://unsplash.com/@rubaitulazad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rubaitul
@@ -20,7 +20,8 @@
 
       </div>
       <div class="overlay-text-box">
-        <h1>Macy's Thanksgiving Day Parade 2023: A Spectacular Display of Tradition and Innovation</h1>
+        <h1>Media Matters vs. Musk: The Clash Over Antisemitic Ads and the
+          Impending Legal Showdown</h1>
       </div>
 
     </figure>
@@ -30,11 +31,18 @@
     <div>
       <h2 class="article-list-h2">Latest News</h2>
       <ul>
-        <li *ngFor="let blog of blogs | slice:0:9" routerLink="/{{blog.routerLink}}">
-          <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
-          <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
-          <hr>
-        </li>
+        <ul>
+          <ng-container *ngFor="let blog of blogs | slice:0:9">
+            <li>
+              <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+              <div class="nav-page-list-title hover-red" [routerLink]="'/' + blog.routerLink">
+                {{ blog.title + ' ' + blog.secondTitle }}
+              </div>
+              <hr>
+            </li>
+          </ng-container>
+        </ul>
+        
       </ul>
     </div>
   </section>

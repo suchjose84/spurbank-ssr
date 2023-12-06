@@ -1,1 +1,50 @@
-<p>life-page works!</p>
+<div class="articleBox">
+
+  <!-- check1 routerlink-->
+  <section routerLink="/solar-storm" class="hero-section navPageSection">
+    <!-- check 2 check the image link in the component.ts file -->
+    <figure class="hero-image-container">
+      <picture class="hero-image-box">
+        <source media="(max-width: 500px)" [srcset]="tabletImage">
+        <source media="(max-width: 800px)" [srcset]="tabletImage">
+        <source media="(min-width: 801px)" [srcset]="largeImage">
+        <img class="responsive-image" [src]="defaultImage" alt="landing-page-image">
+      </picture>
+      <div class="figcaption-container figcap-white">
+        <!--     check 3, check the unsplash link, target="_blank" rel="noopener noreferrer"    -->
+        <figcaption>Photo by <a target="_blank" rel="noopener noreferrer"
+            href="https://unsplash.com/@3dparadise?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Braňo</a>
+          on <a target="_blank" rel="noopener noreferrer"
+            href="https://unsplash.com/photos/round-brown-and-black-illustration-tLFHQIqALz0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+
+
+        </figcaption>
+
+      </div>
+      <div class="overlay-text-box">
+        <!-- check 4, check/update the title -->
+        <h1>Envisioning the Unthinkable: What If a Massive Solar Storm Struck Earth?</h1>
+      </div>
+
+    </figure>
+  </section>
+
+
+  <section class="navPageSection article-list-section">
+    <div>
+      <!-- check 5, Latest news in Entertainment -->
+      <h2 class="article-list-h2">Trending News about Life</h2>
+      <br>
+      <ul>
+        <li *ngFor="let blog of blogs | slice:0:9" routerLink="/{{blog.routerLink}}">
+          <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+          <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
+          <hr>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+</div>

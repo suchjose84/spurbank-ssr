@@ -1,1 +1,48 @@
-<p>food-page works!</p>
+<div class="articleBox">
+
+  <!-- check1 routerlink-->
+  <section routerLink="/mastering-bulalo" class="hero-section navPageSection">
+    <!-- check 2 check the image link in the component.ts file -->
+    <figure class="hero-image-container">
+      <picture class="hero-image-box">
+        <source media="(max-width: 500px)" [srcset]="tabletImage">
+        <source media="(max-width: 800px)" [srcset]="tabletImage">
+        <source media="(min-width: 801px)" [srcset]="largeImage">
+        <img class="responsive-image" [src]="defaultImage" alt="landing-page-image">
+      </picture>
+      <div class="figcaption-container">
+        <!--     check 3, target="_blank" rel="noopener noreferrer", check the unsplash link    -->
+        <figcaption>Photo by <a target="_blank" rel="noopener noreferrer"
+            href="https://www.flickr.com/photos/louellacasandile/">
+            Louel Lacasandile</a> on <a target="_blank" rel="noopener noreferrer"
+            href="https://www.flickr.com/photos/louellacasandile/11615910353/in/photolist-iGszsr-61YVEC-aE2Hzn-2ZzQYm-7YwG28-7GDucu-e4rooo-2muv9rS-varjoh-9zBZcU-86mnEU-gt5cj7-pxJ6V4-2mLb51s-3JSE3Y-p6aged-8skWCX-9mHL1y-bzPJje-9mXT5m-7Wy5uo-8dEsgM-7WpHPN-u5P51f-7SVVUk-9mHL2o-nVyQdQ-4yw4kj-4DA4qp-8rCJ3-rDp5S-cHJxno-B37bop-7upnr7-5ReRb1-ddRGyi-ap4Jea-skFBAj-2ofdDJB-7uBAc7-2jwyUaG-r7Ub3Y-s8bb1Q-5x9gms-5RePFu-9k4iM2-mZew1-ahgYWk-8A5udz-aZYe4a">Flicker</a>
+
+        </figcaption>
+
+      </div>
+      <div class="overlay-text-box">
+        <!-- check 4, check/update the title -->
+        <h1>Mastering Bulalo: Crafting Culinary Comfort with Precision</h1>
+      </div>
+
+    </figure>
+  </section>
+
+
+  <section class="navPageSection article-list-section">
+    <div>
+      <!-- check 5, Latest news in Entertainment -->
+      <h2 class="article-list-h2">Latest Food Blogs</h2>
+      <br>
+      <ul>
+        <li *ngFor="let blog of blogs | slice:0:9" routerLink="/{{blog.routerLink}}">
+          <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+          <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
+          <hr>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+</div>

@@ -1,1 +1,51 @@
-<p>entertainment-page works!</p>
+<div class="articleBox">
+
+  <!-- check1 routerlink-->
+  <section routerLink="/blackpink-receives-mbe" class="hero-section navPageSection">
+    <!-- check 2 check the image link in the component.ts file -->
+    <figure class="hero-image-container">
+      <picture class="hero-image-box">
+        <source media="(max-width: 500px)" [srcset]="tabletImage">
+        <source media="(max-width: 800px)" [srcset]="tabletImage">
+        <source media="(min-width: 801px)" [srcset]="largeImage">
+        <img class="responsive-image" [src]="defaultImage" alt="landing-page-image">
+      </picture>
+      <div class="figcaption-container">
+        <!--     check 3, target="_blank" rel="noopener noreferrer", check the unsplash link    -->
+        <figcaption>Photo by <a target="_blank" rel="noopener noreferrer"
+            href="https://unsplash.com/@steve_j?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Steve
+            Johnson</a> on <a target="_blank" rel="noopener noreferrer"
+            href="https://unsplash.com/photos/a-computer-generated-image-of-the-letter-a-ZPOoDQc8yMw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+        </figcaption>
+
+
+
+
+      </div>
+      <div class="overlay-text-box">
+        <!-- check 4, check/update the title -->
+        <h1>BLACKPINK Honored with MBE Medals by King Charles During State Visit</h1>
+      </div>
+
+    </figure>
+  </section>
+
+
+  <section class="navPageSection article-list-section">
+    <div>
+      <!-- check 5, Latest news in Entertainment -->
+      <h2 class="article-list-h2">Latest News in Entertainment</h2>
+      <br>
+      <ul>
+        <li *ngFor="let blog of blogs | slice:0:9" routerLink="/{{blog.routerLink}}">
+          <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+          <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
+          <hr>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+</div>

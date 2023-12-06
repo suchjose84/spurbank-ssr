@@ -23,7 +23,6 @@ export class HomePageComponent implements OnInit{
   
   ngOnInit() {
     this.blogs = this.blogService.getBlogData();
-    // this.trending1 = `${this.blogs[0].title} ${this.blogs[0].secondTitle}`;
     
   }
 
