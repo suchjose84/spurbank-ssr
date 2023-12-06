@@ -57,10 +57,10 @@ p {
   height: 100%;
   background-color: rgb(253, 204, 253);
 }
-.articleBox section {
-  padding: 0 1%;
+/* .heroSection, .paragraphSection{
+  padding: 0 4%;
 
-}
+} */
 
 .articleBox h3 {
   font-size: 1.2rem;
@@ -113,6 +113,9 @@ p {
 
 /************ NAV PAGES STYLES ******************/
 /* HERO Section */
+.navPageHeroSection {
+  padding: 0;
+}
 .hero-image-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   position: relative;
