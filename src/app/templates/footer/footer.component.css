@@ -17,6 +17,9 @@ footer img {
   width: 100%;
   margin-top: 15px;
 }
+#footerNav a {
+  color: lightgray;
+}
 
 #footerNav ul {
   color: lightgray;
@@ -64,10 +67,6 @@ footer img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-
-  footer img {
-    align-self: flex-start;
   }
 
   #footerNav {

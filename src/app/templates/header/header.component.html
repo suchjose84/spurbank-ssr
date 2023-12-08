@@ -1,16 +1,17 @@
 <header>
 
-  <img class="mousepointer" *ngIf="!showSearchInput || !isMobile && !hideLogo"
-    src="../../assets/images/spurbank-logo/png/logo-no-background.png" alt="headerLogoImg" routerLink="">
+  <a routerLink="" class="logoImage"><img class="mousepointer" *ngIf="!showSearchInput || !isMobile && !hideLogo"
+    src="../../assets/images/spurbank-logo/png/logo-no-background.png" alt="headerLogoImg">
+  </a>
 
   <nav id="headerHorizontalNav">
     <ul>
-      <li class="hover-red" routerLink="/news">News</li>
-      <li class="hover-red" routerLink="/entertainment">Entertainment</li>
-      <li class="hover-red" routerLink="/food">Food</li>
-      <li class="hover-red" routerLink="/life">Life</li>
-      <li class="hover-red" routerLink="/tech">Tech</li>
-      <li class="hover-red" routerLink="/business">Business</li>
+      <a routerLink="/news"><li class="hover-red">News</li></a>
+      <a routerLink="/entertainment"><li class="hover-red" >Entertainment</li></a>
+      <a routerLink="/food"><li class="hover-red" >Food</li></a>
+      <a routerLink="/life"><li class="hover-red" >Life</li></a>
+      <a routerLink="/tech"><li class="hover-red" >Tech</li></a>
+      <a routerLink="/business"><li class="hover-red" >Business</li></a>
       <!-- <li>Videos</li> -->
     </ul>
   </nav>

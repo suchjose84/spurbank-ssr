@@ -9,13 +9,12 @@
   </div>
   <div class="navbar" [ngClass]="{ 'show': isNavbarOpen }">
     <ul>
-      <li routerLink="/news" (click)="closeNavbar()">News</li>
-      <li routerLink="/entertainment" (click)="closeNavbar()">Entertainment</li>
-      <li routerLink="/food" (click)="closeNavbar()">Food</li>
-      <li routerLink="/life" (click)="closeNavbar()">Life</li>
-      <li routerLink="/tech" (click)="closeNavbar()">Tech</li>
-      <li routerLink="/business" (click)="closeNavbar()">Business</li>
-      <!-- <li routerLink="/video" (click)="closeNavbar()">Videos</li> -->
+      <a routerLink="/news"></a><li (click)="closeNavbar()">News</li>
+      <a routerLink="/entertainment"></a><li (click)="closeNavbar()">Entertainment</li>
+      <a routerLink="/food"></a><li (click)="closeNavbar()">Food</li>
+      <a routerLink="/life"></a><li (click)="closeNavbar()">Life</li>
+      <a routerLink="/tech"></a><li (click)="closeNavbar()">Tech</li>
+      <a routerLink="/business"></a><li (click)="closeNavbar()">Business</li>
     </ul>
   </div>
 </nav>

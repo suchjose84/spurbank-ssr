@@ -31,18 +31,11 @@
     <div>
       <h2 class="article-list-h2">Latest News</h2>
       <ul>
-        <ul>
-          <ng-container *ngFor="let blog of blogs | slice:0:9">
-            <li>
-              <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
-              <div class="nav-page-list-title hover-red" [routerLink]="'/' + blog.routerLink">
-                {{ blog.title + ' ' + blog.secondTitle }}
-              </div>
-              <hr>
-            </li>
-          </ng-container>
-        </ul>
-        
+        <li *ngFor="let blog of blogs | slice:0:9">
+          <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
+          <a routerLink="/{{blog.routerLink}}"><div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div></a>
+          <hr>
+        </li>
       </ul>
     </div>
   </section>

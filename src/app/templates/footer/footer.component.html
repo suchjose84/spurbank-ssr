@@ -1,22 +1,23 @@
 <div id="footerWrapper">
   <footer>
-    <img src="../../assets/images/spurbank-logo/png/logo-no-background.png" alt="headerLogoImg" routerLink="">
+    <a routerLink="">
+      <img src="../../assets/images/spurbank-logo/png/logo-no-background.png" alt="headerLogoImg">
+    </a>
+    
     <nav id="footerNav">
       <ul>
-        <li class="hover-red" routerLink="/news">News</li>
-        <li class="hover-red" routerLink="/entertainment">Entertainment</li>
-        <li class="hover-red" routerLink="/food">Food</li>
-        <li class="hover-red" routerLink="/life">Life</li>
-        <li class="hover-red" routerLink="/tech">Tech</li>
-        <li class="hover-red" routerLink="/business">Business</li>
-        <!-- <li routerLink="/">Videos</li> -->
+        <a routerLink="/news"><li class="hover-red" >News</li></a>
+        <a routerLink="/entertainment"><li class="hover-red">Entertainment</li></a>
+        <a routerLink="/food"><li class="hover-red">Food</li></a>
+        <a routerLink="/life"><li class="hover-red">Life</li></a>
+        <a routerLink="/tech"><li class="hover-red">Tech</li></a>
+        <a routerLink="/business"><li class="hover-red">Business</li></a>
       </ul>
     </nav>
     <div id="footerIconDiv">
         <ul id="footerMediaIconList">
           <li><i class="fa-brands fa-facebook" (click)="openFaceBookPage()"></i></li>
           <li><i class="fa-brands fa-x-twitter" (click)="openTwitterXpage()"></i></li>
-          <!-- <li><i class="fa-brands fa-tiktok"></i></li> -->
   
         </ul>
     </div>

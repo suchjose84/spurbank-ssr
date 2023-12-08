@@ -14,10 +14,15 @@ header > *:not(:first-child) {
     margin-left: 10px;
 }
 
-header img {
-  display: block;
-  max-height: 100%;
+.logoImage {
+  height: 100%;
   outline: none;
+  padding: 0;
+
+}
+.logoImage img {
+  display: block;
+  height: 100%;
 
 }
 
@@ -33,6 +38,9 @@ header img[hideLogo] {
 #headerHorizontalNav {
   display: none;
   font-weight: bold;
+}
+#headerHorizontalNav a {
+  color: lightgray;
 }
   
 

@@ -12,9 +12,6 @@ export class Blog01YuyuHakushoComponent implements OnInit {
   constructor(private meta: Meta, private title: Title) { }
 
   ngOnInit(): void {
-    // Update meta tags for the home page
-    // this.meta.updateTag({ name: 'Spurbank', content: 'Spurbank.info' });
-    // this.meta.updateTag({ name: 'description', content: 'Description for your home page.' });
     this.meta.updateTag({ property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho' });
     this.meta.updateTag({ property: 'og:type', content: 'article' });
     this.meta.updateTag({ property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' });

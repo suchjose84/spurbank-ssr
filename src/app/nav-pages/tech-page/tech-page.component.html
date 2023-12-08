@@ -34,9 +34,9 @@
       <h2 class="article-list-h2">Latest Tech News</h2>
       <br>
       <ul>
-        <li *ngFor="let blog of blogs | slice:0:9" routerLink="/{{blog.routerLink}}">
+        <li *ngFor="let blog of blogs | slice:0:9">
           <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
-          <div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div>
+          <a routerLink="/{{blog.routerLink}}"><div class="nav-page-list-title hover-red">{{blog.title +' '+ blog.secondTitle}}</div></a>
           <hr>
         </li>
       </ul>
