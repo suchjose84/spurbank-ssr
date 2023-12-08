@@ -24,7 +24,7 @@ export class HomePageComponent implements OnInit{
   ngOnInit() {
     this.blogs = this.blogService.getBlogData();
 
-    this.setTitle(this.pageTitle);
+    this.title.setTitle(this.pageTitle);
     this.meta.updateTag({ name: 'description', content: 'Spurbank is a new site for making blogs' });
 
     // check 2 - Update tags
