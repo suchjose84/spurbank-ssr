@@ -32,14 +32,10 @@ export class Blog01YuyuHakushoComponent implements OnInit {
       { name: 'twitter:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' },
       { name: 'twitter:site', content: '@spurbankinfo' },
       { name: 'twitter:creator', content: '@spurbankinfo' },
-      { name: 'twitter:url', content: 'https://www.spurbank.info/yuyu-hakusho' },
+      { name: 'twitter:url', content: 'https://www.spurbank.info/yuyu-hakusho' }
 
     ]);
 
   }
-
-  // private addTags(tags: { property: string, content: string }[]): void {
-  //   tags.forEach(tag => this.meta.addTag({ property: tag.property, content: tag.content }));
-  // }
 }
 
