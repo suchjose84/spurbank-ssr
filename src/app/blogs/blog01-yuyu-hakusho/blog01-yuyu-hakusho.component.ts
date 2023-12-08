@@ -16,6 +16,7 @@ export class Blog01YuyuHakushoComponent implements OnInit {
   ngOnInit(): void {
     // check 2 - Update tags
     this.addTags([
+      { property: 'fb:app_id', content: '887231332962593' },
       { property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho' },
       { property: 'og:type', content: 'article' },
       { property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' },
