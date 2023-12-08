@@ -17,14 +17,23 @@ export class Blog01YuyuHakushoComponent implements OnInit {
 
     this.title.setTitle(this.blogTitle);
 
-    // check 2 - Update meata tags
+    // check 2 - Update meta tags
     this.meta.addTags([
       { name: 'fb:app_id', content: '887231332962593' },
       { name: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho' },
       { name: 'og:type', content: 'article' },
       { name: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' },
       { name: 'og:description', content: 'Yuyu Hakusho Live-Action coming on Netflix on December 14, 2023' },
-      { name: 'og:image', content: 'http://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
+      { name: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' },
+
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' },
+      { name: 'twitter:description', content: 'Yuyu Hakusho Live-Action coming on Netflix on December 14, 2023' },
+      { name: 'twitter:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' },
+      { name: 'twitter:site', content: '@spurbankinfo' },
+      { name: 'twitter:creator', content: '@spurbankinfo' },
+      { name: 'twitter:url', content: 'https://www.spurbank.info/yuyu-hakusho' },
+
     ]);
 
   }

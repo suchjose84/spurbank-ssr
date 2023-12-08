@@ -25,26 +25,17 @@ export class HomePageComponent implements OnInit{
     this.blogs = this.blogService.getBlogData();
 
     this.title.setTitle(this.pageTitle);
-    this.meta.updateTag({ name: 'description', content: 'Spurbank is a new site for making blogs' });
 
     // check 2 - Update tags
-    this.addTags([
+    this.meta.addTags([
       { property: 'og:title', content: 'Spurbank' },
       { property: 'og:description', content: 'Inifinite Stories, One Platform' },
       { property: 'og:url', content: 'https://www.spurbank.info'},
-      { property: 'og:type', content: 'article' }
+      { property: 'og:type', content: 'website' },
 
       // { property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
     ]);
 
-  }
-
-  private addTags(tags: { property: string, content: string }[]): void {
-    tags.forEach(tag => this.meta.addTag({ property: tag.property, content: tag.content }));
-  }
-
-  private setTitle(newTitle: string): void {
-    this.title.setTitle(newTitle);
   }
   
 
