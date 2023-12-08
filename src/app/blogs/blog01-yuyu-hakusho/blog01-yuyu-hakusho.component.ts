@@ -7,22 +7,31 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./blog01-yuyu-hakusho.component.css']
 })
 export class Blog01YuyuHakushoComponent implements OnInit {
+
+  // check 1 - Update title
   blogTitle: string = "Yu Yu Hakusho | Spurbank.info";
 
   constructor(private meta: Meta, private title: Title) { }
 
   ngOnInit(): void {
-    this.meta.updateTag({ property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho' });
-    this.meta.updateTag({ property: 'og:type', content: 'article' });
-    this.meta.updateTag({ property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' });
-    this.meta.updateTag({ property: 'og:description', content: 'Yuyu Hakusho Live-Action coming on Netflix' });
-    this.meta.updateTag({ property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' });
-    
+    // check 2 - Update tags
+    this.addTags([
+      { property: 'og:url', content: 'https://www.spurbank.info/yuyu-hakusho' },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:title', content: 'Yu Yu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle' },
+      { property: 'og:description', content: 'Yuyu Hakusho Live-Action coming on Netflix' },
+      { property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
+    ]);
+
     this.setTitle(this.blogTitle);
   }
 
-  // Function to update the title dynamically based on the blog post
-  setTitle(newTitle: string) {
+  private addTags(tags: { property: string, content: string }[]): void {
+    tags.forEach(tag => this.meta.addTag({ property: tag.property, content: tag.content }));
+  }
+
+  private setTitle(newTitle: string): void {
     this.title.setTitle(newTitle);
   }
 }
+
