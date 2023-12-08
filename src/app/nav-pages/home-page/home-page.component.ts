@@ -17,23 +17,25 @@ export class HomePageComponent implements OnInit{
   largeImage = '../../assets/images/spurbank-images/macys-1199x547.jpg';
   defaultImage = '../../assets/images/spurbank-images/macys-2400x1600.jpg';
 
-  blogTitle: string = "Spurbank";
+  pageTitle: string = "Spurbank";
 
   constructor(private blogService: BlogService, private meta:Meta, private title:Title){}
   
   ngOnInit() {
     this.blogs = this.blogService.getBlogData();
 
+    this.setTitle(this.pageTitle);
+    this.meta.updateTag({ name: 'description', content: 'Spurbank is a new site for making blogs' });
+
     // check 2 - Update tags
     this.addTags([
-      { property: 'og:url', content: 'https://www.spurbank.info' },
-      { property: 'og:type', content: 'article' },
       { property: 'og:title', content: 'Spurbank' },
       { property: 'og:description', content: 'Inifinite Stories, One Platform' },
+      { property: 'og:url', content: 'https://www.spurbank.info'},
+      { property: 'og:type', content: 'article' }
+
       // { property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
     ]);
-
-    this.setTitle(this.blogTitle);
 
   }
 
