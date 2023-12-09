@@ -27,18 +27,14 @@ export class HomePageComponent implements OnInit{
     this.title.setTitle(this.pageTitle);
 
     // check 2 - Update tags
-    this.meta.addTags([
-      { property: 'og:title', content: 'Spurbank' },
-      { property: 'og:description', content: 'Inifinite Stories, One Platform' },
-      { property: 'og:url', content: 'https://www.spurbank.info'},
-      { property: 'og:type', content: 'website' },
-
-      // { property: 'og:image', content: 'https://spurbank-images.s3.ap-southeast-2.amazonaws.com/yuyu-hakusho.png' }
-    ]);
+    this.meta.updateTag({ name: 'description', content: 'Spurbank - Infinite Stories, One Platform' });
+    this.meta.updateTag({ property: 'og:title', content: this.pageTitle });
+    this.meta.updateTag({ property: 'og:description', content: 'Infinite Stories, One Platform' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://www.spurbank.info' });
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
 
   }
   
-
   capitalizeFirstLetter(str: string): string {
     if (typeof str === 'string' && str.length > 0) {
       return str.charAt(0).toUpperCase() + str.slice(1);

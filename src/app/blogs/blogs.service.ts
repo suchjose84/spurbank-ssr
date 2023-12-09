@@ -1154,7 +1154,7 @@ export default class BlogsService {
       {
         id: 15,
         title: "Ghostbusters Frozen Empire: ",
-        secondTitle: "",
+        secondTitle: "Unveiling the Chilling Sequel",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315" src="https://www.youtube.com/embed/wFNK_KEmcWs?si=FGfk_VpOQTTWwZbZ"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -33,6 +33,12 @@ export function app(): express.Express {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
 
+  
+
+
+
+
+
   return server;
 }
 

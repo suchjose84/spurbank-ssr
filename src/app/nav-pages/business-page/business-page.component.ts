@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import BlogService from '../../blogs/blogs.service';
 import { Blog } from '../../blogs/blog.model';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-business-page',
@@ -16,13 +17,23 @@ export class BusinessPageComponent implements OnInit{
   largeImage = '../../assets/images/spurbank-images/open-ai-1199x547.jpg';
   defaultImage = '../../assets/images/spurbank-images/open-ai-2400x1600.jpg';
 
-  
+  pageTitle: string = "Business | Spurbank";
 
-  constructor(private blogService: BlogService){}
+  constructor(private blogService: BlogService, private meta:Meta, private title: Title){}
   
   
   ngOnInit() {
     this.blogs = this.blogService.getBlogData();
+
+    this.title.setTitle(this.pageTitle);
+
+    // Update meta tags
+    this.meta.updateTag({ name: 'description', content: 'Spurbank - Infinite Stories, One Platform' });
+    this.meta.updateTag({ property: 'og:title', content: this.pageTitle });
+    this.meta.updateTag({ property: 'og:description', content: 'Infinite Stories, One Platform' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://www.spurbank.info/business' });
+    this.meta.updateTag({ property: 'og:type', content: 'article' });
+
   }
 
   capitalizeFirstLetter(str: string): string {
@@ -33,5 +44,4 @@ export class BusinessPageComponent implements OnInit{
     }
   }
   
-
 }
