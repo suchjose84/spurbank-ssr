@@ -42,6 +42,10 @@ import { EntertainmentPageComponent } from './nav-pages/entertainment-page/enter
 import { FoodPageComponent } from './nav-pages/food-page/food-page.component';
 import { LifePageComponent } from './nav-pages/life-page/life-page.component';
 import { TechPageComponent } from './nav-pages/tech-page/tech-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//TypeaheadModule
+import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -84,6 +88,7 @@ import { TechPageComponent } from './nav-pages/tech-page/tech-page.component';
 
 
 
+
   ],
 
   imports: [
@@ -94,6 +99,8 @@ import { TechPageComponent } from './nav-pages/tech-page/tech-page.component';
     BlogRoutingModule,
     NavRoutingModule,
     RouterModule,
+    BrowserAnimationsModule,
+    NgbTypeahead
 
   ],
   providers: [],

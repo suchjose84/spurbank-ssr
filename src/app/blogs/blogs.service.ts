@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
 import { Blog } from '../blogs/blog.model';
 
 @Injectable({providedIn: 'root'})
@@ -7,8 +8,7 @@ export default class BlogsService {
     private blogs: Blog[] = [
       {
         id: 1,
-        title: "Yu Yu Hakusho Live-Action Adaptation:",
-        secondTitle: "A Journey from Manga to Netflix Spectacle",
+        title: "YuYu Hakusho Live-Action Adaptation: A Journey from Manga to Netflix Spectacle",
         videoEmbed: '<iframe class="article-iframe" width="560" height="315" src="https://www.youtube.com/embed/W_Y8BJbzFcQ?si=_XTsQB2_Uw9mdRGl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
         content: `<p>Embarking on a journey through the nostalgic corridors of Weekly Shonen Jump's past,
         the legendary manga "Yu Yu Hakusho" is set to transcend its printed origins and materialize on screens
@@ -65,8 +65,7 @@ export default class BlogsService {
       },
       {
         id: 2,
-        title: "Macy's Thanksgiving Day Parade 2023:",
-        secondTitle: "A Spectacular Display of Tradition and Innovation",
+        title: "Macy's Thanksgiving Day Parade 2023: A Spectacular Display of Tradition and Innovation",
         videoEmbed: `<iframe class=article-iframe width="560" height="315" src="https://www.youtube.com/embed/HL4uPfXzqTQ?si=Jeo3K832MPuPPmuB"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -161,8 +160,7 @@ export default class BlogsService {
       },
       {
         id: 3,
-        title: "Media Matters vs. Musk:",
-        secondTitle: "The Clash Over Antisemitic Ads and the Impending Legal Showdown",
+        title: "Media Matters vs. Musk: The Clash Over Antisemitic Ads and the Impending Legal Showdown",
         videoEmbed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/nACfqFSZ8-A?si=zx9S3BsQUhK0ZBV6"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -218,8 +216,7 @@ export default class BlogsService {
       },
       {
         id: 4,
-        title: "Historic Triumph:",
-        secondTitle: "Miss Nicaragua Crowned Miss Universe 2023",
+        title: "Historic Triumph: Miss Nicaragua Crowned Miss Universe 2023",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315" src="https://www.youtube.com/embed/Qd_DdwFvNDA?si=kY-dleE5hp2dpm_h"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -294,8 +291,7 @@ export default class BlogsService {
       },
       {
         id: 5,
-        title: "SpaceX's Starship Test Flight:",
-        secondTitle: "Challenges and Opportunities",
+        title: "SpaceX's Starship Test Flight: Challenges and Opportunities",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/BnydBDl90Lc?si=xxpnGHKKDanUT3pR" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -347,8 +343,7 @@ export default class BlogsService {
       },
       {
         id: 6,
-        title: "Turmoil at OpenAI: ",
-        secondTitle: "Leadership Shake-up Raises Questions About the Future",
+        title: "Turmoil at OpenAI: Leadership Shake-up Raises Questions About the Future",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315" src="https://www.youtube.com/embed/aCJb9voVSw0?si=GdOeC4JGwiRW3HAW"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -447,8 +442,7 @@ export default class BlogsService {
       },
       {
         id: 7,
-        title: "Envisioning the Unthinkable: ",
-        secondTitle: "What If a Massive Solar Storm Struck Earth? ",
+        title: "Envisioning the Unthinkable: What If a Massive Solar Storm Struck Earth?",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315" src="https://www.youtube.com/embed/q2kDvrs2VEs?si=BWgRIgYtGnQAlll2"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -578,8 +572,7 @@ export default class BlogsService {
       },
       {
         id: 8,
-        title: "CZ Bids Farewell: ",
-        secondTitle: "A New Chapter for Binance Under Richard Teng's Leadership",
+        title: "CZ Bids Farewell: A New Chapter for Binance Under Richard Teng's Leadership",
         videoEmbed: "",
         content: `<div class="articleBox">
         <h1 class="main-title">
@@ -651,8 +644,7 @@ export default class BlogsService {
       },
       {
         id: 9,
-        title: "Binance CEO Pleads Guilty in $4.3 Billion Settlement: ",
-        secondTitle: "A Turning Point for Cryptocurrency Regulation",
+        title: "Binance CEO Pleads Guilty in $4.3 Billion Settlement: A Turning Point for Cryptocurrency Regulation",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/lOhF-ITjSWU?si=fURzrj2zNxmAiD30" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -734,8 +726,7 @@ export default class BlogsService {
       },
       {
         id: 10,
-        title: "NASA Thanksgiving 2023: ",
-        secondTitle: "A Cosmic Celebration from Expedition 70 Crew Members",
+        title: "NASA Thanksgiving 2023: A Cosmic Celebration from Expedition 70 Crew Members",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/31b1yjUBlO0?si=8iuy1_8QOrJBqibH" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -815,7 +806,6 @@ export default class BlogsService {
       {
         id: 11,
         title: "Adam Sandler's Animated Tale of Laughter Streams on Netflix",
-        secondTitle: "",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/G_AEL-Xo5l8?si=I95dZVkpubhuDHGz" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -924,7 +914,6 @@ export default class BlogsService {
       {
         id: 12,
         title: "BLACKPINK Honored with MBE Medals by King Charles During State Visit",
-        secondTitle: "",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/Oemqib-XMNw?si=tC79muyMmN4aDsUL" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -975,8 +964,7 @@ export default class BlogsService {
       },
       {
         id: 13,
-        title: "Mastering Bulalo: ",
-        secondTitle: "Crafting Culinary Comfort with Precision",
+        title: "Mastering Bulalo: Crafting Culinary Comfort with Precision",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/8mxoL7jMfB0?si=BfFG-RnVJP1Ccs8H" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1078,8 +1066,7 @@ export default class BlogsService {
       },
       {
         id: 14,
-        title: "Godzilla Minus One: ",
-        secondTitle: "Roaring Back to the Roots of the Franchise",
+        title: "Godzilla Minus One: Roaring Back to the Roots of the Franchise",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315"
         src="https://www.youtube.com/embed/VvSrHIX5a-0?si=mWstwUNfMr8ssiIw" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1153,8 +1140,7 @@ export default class BlogsService {
       },
       {
         id: 15,
-        title: "Ghostbusters Frozen Empire: ",
-        secondTitle: "Unveiling the Chilling Sequel",
+        title: "Ghostbusters Frozen Empire: Unveiling the Chilling Sequel",
         videoEmbed: `<iframe class="article-iframe" width="560" height="315" src="https://www.youtube.com/embed/wFNK_KEmcWs?si=FGfk_VpOQTTWwZbZ"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1235,5 +1221,20 @@ export default class BlogsService {
     getBlogData(): Blog[] {
       return this.blogs;
     }
+
+    // Add a method to search blogs
+    searchBlogs(term: string): Observable<Blog[]> {
+    // Replace the following line with your actual logic to search blogs
+    // For example, if your blogs array is stored in a variable called 'allBlogs'
+    // you can filter them based on the search term
+      const filteredBlogs = this.blogs.filter(blog =>
+        blog.title.toLowerCase().includes(term.toLowerCase()) ||
+        blog.content.toLowerCase().includes(term.toLowerCase())
+      );
+
+      return of(filteredBlogs); // Return the filtered blogs as an observable
+    }
+
+    
   }
   

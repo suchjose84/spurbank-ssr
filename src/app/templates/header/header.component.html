@@ -1,18 +1,30 @@
 <header>
 
   <a routerLink="" class="logoImage"><img class="mousepointer" *ngIf="!showSearchInput || !isMobile && !hideLogo"
-    src="../../assets/images/spurbank-logo/png/logo-no-background.png" alt="headerLogoImg">
+      src="../../assets/images/spurbank-logo/png/logo-no-background.png" alt="headerLogoImg">
   </a>
 
   <nav id="headerHorizontalNav">
     <ul>
-      <a routerLink="/news"><li class="hover-red">News</li></a>
-      <a routerLink="/entertainment"><li class="hover-red" >Entertainment</li></a>
-      <a routerLink="/food"><li class="hover-red" >Food</li></a>
-      <a routerLink="/life"><li class="hover-red" >Life</li></a>
-      <a routerLink="/tech"><li class="hover-red" >Tech</li></a>
-      <a routerLink="/business"><li class="hover-red" >Business</li></a>
-      
+      <a routerLink="/news">
+        <li class="hover-red">News</li>
+      </a>
+      <a routerLink="/entertainment">
+        <li class="hover-red">Entertainment</li>
+      </a>
+      <a routerLink="/food">
+        <li class="hover-red">Food</li>
+      </a>
+      <a routerLink="/life">
+        <li class="hover-red">Life</li>
+      </a>
+      <a routerLink="/tech">
+        <li class="hover-red">Tech</li>
+      </a>
+      <a routerLink="/business">
+        <li class="hover-red">Business</li>
+      </a>
+
     </ul>
   </nav>
 
@@ -29,7 +41,21 @@
 
         <div id="homeTopInputDiv" [ngClass]="{'show': showSearchInput, 'hide': !showSearchInput}"
           (click)="hideSearchInput()">
-          <input type="text" placeholder="Search Spurbank" id="homeTopSearchInput" name="homeTopSearchBar">
+          <input
+            type="text"
+            id="homeTopSearchInput"
+            name="homeTopSearchBar"
+            autocomplete="off"
+            placeholder="Search Spurbank"
+            [(ngModel)]="searchQuery"
+            [ngbTypeahead]="searchBlogs"
+            [resultFormatter]="formatter"
+            [inputFormatter]="formatter"
+            (input)="filterBlogs()"
+            [ngbTypeahead]="searchBlogs"
+            (selectItem)="navigateToBlog($event.item)"
+          />
+
         </div>
         <div class="mousepointer" id="searchIconBox" [style.flex]="showSearchInput ? '0' : '1'"
           [ngClass]="{'hide': showSearchInput, 'show': !showSearchInput}">
@@ -37,6 +63,7 @@
         </div>
       </label>
     </form>
+
   </div>
   <div>
     <ul id="headerMediaIconList">

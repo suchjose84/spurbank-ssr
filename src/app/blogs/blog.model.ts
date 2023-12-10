@@ -2,7 +2,6 @@
 export interface Blog {
     id: number;
     title: string;
-    secondTitle: string;
     // author: string;
     videoEmbed: string;
     content: string;
