@@ -10,14 +10,22 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 
 export class HomePageComponent implements OnInit{
-  blogs: Blog[] = [];
-
+  
   mobileImage = '../../assets/images/spurbank-images/macys-500x333.jpg';
   tabletImage = '../../assets/images/spurbank-images/macys-800x533.jpg';
   largeImage = '../../assets/images/spurbank-images/macys-1199x547.jpg';
   defaultImage = '../../assets/images/spurbank-images/macys-2400x1600.jpg';
 
+  blogs: Blog[] = [];
   pageTitle: string = "Spurbank";
+  displayedBlogs: Blog[] = [];
+
+  articleTitle: string = "Spurbank.info";
+  articleDescription: string = "Infinite Stories One Platform";
+  articleUrl: string = "https://www.spurbank.info";
+  articleImage: string = "placeholder";
+  twitterSite: string = "spurbank_info";
+  articleDate: string = "November 23,2023";
 
   constructor(private blogService: BlogService, private meta:Meta, private title:Title){}
   
@@ -25,14 +33,57 @@ export class HomePageComponent implements OnInit{
     this.blogs = this.blogService.getBlogData();
 
     this.title.setTitle(this.pageTitle);
+    this.setupFacebookCard();
+    this.setupTwitterCard();
+    this.filterBlogs();
 
-    // check 2 - Update tags
-    this.meta.updateTag({ name: 'description', content: 'Spurbank - Infinite Stories, One Platform' });
-    this.meta.updateTag({ property: 'og:title', content: this.pageTitle });
-    this.meta.updateTag({ property: 'og:description', content: 'Infinite Stories, One Platform' });
-    this.meta.updateTag({ property: 'og:url', content: 'https://www.spurbank.info' });
-    this.meta.updateTag({ property: 'og:type', content: 'website' });
+  }
+  // Update Facebook meta tags using updateTag method
+  private setupFacebookCard(): void {
+    const facebookCardMetaTags = [
+      { property: 'og:title', content: this.articleTitle },
+      { property: 'og:description', content: this.articleDescription },
+      { property: 'og:url', content: this.articleUrl },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:image', content: this.articleImage}
+    ];
 
+    facebookCardMetaTags.forEach(tag => {
+      this.meta.updateTag({ property: tag.property, content: tag.content});
+
+    });
+  }
+  // Update Twitter meta tags using updateTag method
+  private setupTwitterCard(): void {
+    const twitterCardMetaTags = [
+      { name: 'twitter:title', content: this.articleTitle },
+      { name: 'twitter:description', content: this.articleDescription },
+      { name: 'twitter:url', content: this.articleUrl },
+      { name: 'twitter:image', content: this.articleImage }
+    ];
+  
+    
+    twitterCardMetaTags.forEach(tag => {
+      this.meta.updateTag({ name: tag.name, content: tag.content });
+    });
+  }
+
+  private encodeURIComponent(uri: string): string {
+    return encodeURIComponent(uri).replace(/[!'()*]/g, (c) => {
+      return '%' + c.charCodeAt(0).toString(16);
+    });
+  }
+
+  createTwitterPost(): void {
+
+    const encodedText = this.encodeURIComponent(this.articleTitle);
+    const encodedImageUrl = this.encodeURIComponent(this.articleUrl);
+    const encodedAccount = this.encodeURIComponent(this.twitterSite);
+  
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}&via=${encodedAccount}&url=${encodedImageUrl}`;
+  
+    // Open Twitter in a new window or tab
+    window.open(twitterUrl, '_blank');
   }
   
   capitalizeFirstLetter(str: string): string {
@@ -41,6 +92,27 @@ export class HomePageComponent implements OnInit{
     } else {
       return str;
     }
+  }
+
+  private filterBlogs(): void {
+    this.displayedBlogs = [...this.blogs];
+    this.displayedBlogs.sort((a, b) => {
+      // Convert string dates to Date objects for comparison
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+  
+      // Sort in descending order
+      return dateB.getTime() - dateA.getTime();
+    });
+  }
+
+  formatDate(dateString: string): string {
+    const options: Intl.DateTimeFormatOptions = { 
+      month: 'long', 
+      day: 'numeric', 
+      year: 'numeric'
+    };
+    return new Date(dateString).toLocaleDateString(undefined, options);
   }
 
 

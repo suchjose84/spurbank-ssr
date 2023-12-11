@@ -9,5 +9,6 @@ export interface Blog {
     date: string;
     imageURL: string;
     routerLink: string;
+    author: string;
 
 }

@@ -28,21 +28,20 @@
     </figure>
   </section>
 
-
   <section class="article-list-section">
     <div>
-      <!-- check 5, Latest news in Entertainment -->
-      <h2 class="article-list-h2">Latest Food Blogs</h2>
+      <h2 class="article-list-h2">Latest in Food</h2>
       <br>
       <ul>
-        <li *ngFor="let blog of blogs | slice:0:9">
+        <li *ngFor="let blog of displayedBlogs">
+          <!-- Display filtered blogs -->
           <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
-          <a routerLink="/{{blog.routerLink}}"><div class="nav-page-list-title hover-red">{{blog.title}}</div></a>
+          <a routerLink="/{{ blog.routerLink }}"><div class="nav-page-list-title hover-red">{{ blog.title }}</div></a>
+          <p class="nav-page-list-p">{{formatDate(blog.date)}}</p>
           <hr>
         </li>
       </ul>
     </div>
   </section>
-
 
 </div>

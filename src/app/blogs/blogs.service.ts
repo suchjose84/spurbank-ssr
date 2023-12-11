@@ -62,6 +62,7 @@ export default class BlogsService {
         date: "2023-11-22",
         imageURL: "",
         routerLink: 'yuyu-hakusho',
+        author: 'Spuffy'
       },
       {
         id: 2,
@@ -157,6 +158,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'macys-parade2023',
+        author: 'Spuffy'
       },
       {
         id: 3,
@@ -213,6 +215,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'matters-vs-elon-musk',
+        author: 'Spuffy'
       },
       {
         id: 4,
@@ -288,6 +291,7 @@ export default class BlogsService {
         date: "2023-11-22",
         imageURL: "",
         routerLink: 'miss-universe-2023-nicaragua',
+        author: 'Spuffy'
       },
       {
         id: 5,
@@ -340,6 +344,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'spacex-test-flight',
+        author: 'Spuffy'
       },
       {
         id: 6,
@@ -435,10 +440,11 @@ export default class BlogsService {
         </section>
       
       </div>`,
-        genre: "Business",
-        date: "2023-11-23",
+        genre: "business",
+        date: "2023-11-21",
         imageURL: "",
         routerLink: 'turmoil-at-openai',
+        author: 'Spuffy'
       },
       {
         id: 7,
@@ -569,6 +575,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'solar-storm',
+        author: 'Spuffy'
       },
       {
         id: 8,
@@ -637,10 +644,11 @@ export default class BlogsService {
         </section>
       
       </div>`,
-        genre: "Business",
-        date: "2023-11-23",
+        genre: "business",
+        date: "2023-11-22",
         imageURL: "",
         routerLink: 'cz-resigns-binance',
+        author: 'Spuffy'
       },
       {
         id: 9,
@@ -719,10 +727,11 @@ export default class BlogsService {
       
       </div>
       `,
-        genre: "Business",
+        genre: "business",
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'binance-ceo-pleads-guilty',
+        author: 'Spuffy'
       },
       {
         id: 10,
@@ -802,6 +811,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'nasa-thanksgiving-2023',
+        author: 'Spuffy'
       },
       {
         id: 11,
@@ -906,10 +916,11 @@ export default class BlogsService {
       
       </div>
       `,
-        genre: "Entertainment",
+        genre: "entertainment",
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'leo-on-netflix',
+        author: 'Spuffy'
       },
       {
         id: 12,
@@ -961,6 +972,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'blackpink-receives-mbe',
+        author: 'Spuffy'
       },
       {
         id: 13,
@@ -1063,6 +1075,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'mastering-bulalo',
+        author: 'Spuffy'
       },
       {
         id: 14,
@@ -1137,6 +1150,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: 'godzilla-minus-one',
+        author: 'Spuffy'
       },
       {
         id: 15,
@@ -1213,6 +1227,7 @@ export default class BlogsService {
         date: "2023-11-23",
         imageURL: "",
         routerLink: "ghostbusters-frozen-empire",
+        author: "Spuffy"
       },
       // Add more blog entries as needed
     ];

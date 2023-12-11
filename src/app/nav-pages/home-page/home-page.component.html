@@ -18,6 +18,8 @@
       </div>
       <div class="overlay-text-box">
         <h1>Macy's Thanksgiving Day Parade 2023: A Spectacular Display of Tradition and Innovation</h1>
+        <p>{{articleDate}}</p>
+
       </div>
       
     </figure></a>
@@ -26,13 +28,15 @@
   <section class="article-list-section">
     <div>
       <h2 class="article-list-h2">Latest News</h2>
+      <br>
       <ul>
-        <li *ngFor="let blog of blogs | slice:0:15">
+        <li *ngFor="let blog of displayedBlogs">
           <div class="nav-page-list-category">{{ capitalizeFirstLetter(blog.genre) }}</div>
-          <a routerLink="/{{blog.routerLink}}"><div class="nav-page-list-title hover-red">{{blog.title}}</div></a>
+          <a routerLink="/{{ blog.routerLink }}"><div class="nav-page-list-title hover-red">{{ blog.title }}</div></a>
+          <p class="nav-page-list-p">{{formatDate(blog.date)}}</p>
           <hr>
         </li>
-      </ul>
+      </ul>      
     </div>
   </section>
 
