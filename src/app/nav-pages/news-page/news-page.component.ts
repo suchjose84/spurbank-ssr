@@ -32,6 +32,7 @@ export class NewsPageComponent implements OnInit{
     this.blogs = this.blogService.getBlogData();
 
     this.title.setTitle(this.pageTitle);
+    this.meta.updateTag({name: 'description', content: this.articleDescription});
     this.setupFacebookCard();
     this.setupTwitterCard();
     this.filterBlogs();
